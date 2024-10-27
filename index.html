@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Browser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Star Wars Browser</h1>
+
+        <!-- Buttons to choose category -->
+        <div class="buttons">
+            <button onclick="fetchData('people')">People</button>
+            <button onclick="fetchData('planets')">Planets</button>
+            <button onclick="fetchData('starships')">Starships</button>
+        </div>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search..." oninput="searchData()">
+
+        <!-- List of items -->
+        <div id="itemList"></div>
+
+        <!-- Details section -->
+        <div id="itemDetails" style="display: none;">
+            <h2 id="itemName"></h2>
+            <p id="itemInfo"></p>
+            <button id="showMoreBtn" onclick="toggleAdditionalInfo()">Show More Info</button>
+            <div id="additionalInfo" style="display: none;"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
